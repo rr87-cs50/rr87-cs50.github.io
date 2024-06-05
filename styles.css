@@ -5,21 +5,29 @@ body {
     padding: 0;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
+* , *:before, *:after{ 
+    box-sizing:border-box; 
+    -moz-box-sizing:border-box; 
+    -webkit-box-sizing:border-box; 
+    -ms-box-sizing:border-box;
+  }
+
 nav{
     height: 60px;
     background: #04d8fd; 
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-right: 10px;
-
+    padding-right: 20px;
+    width: 100%;
+    min-width: 620px;
+    padding-left: 20px;
 }
 
 .logo{
     color: #000;
     font-size: 1.2rem;
     font-weight: bold;
-    padding: 0 2rem;
 }
 .container{
     display: grid;
@@ -37,8 +45,9 @@ nav{
 }
 .col2{
     margin-top: 40px;
-    margin-left: 10px;
+    margin-left: 20px;
     width: 50%;
+    align-items: center;
 }
 @media (max-width: 900px){
     .container {
@@ -51,12 +60,18 @@ nav{
         margin-bottom: 0px;
     }
     .col2{
-        align-items: top;
+        align-items: center;
         margin-top: 15px;
         margin-left: 0px;
-        width: 600px;
+        width: 625px;
     }
 }
+hr {
+    border: none;
+    border-top: 1px dotted rgb(0, 0, 0);
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
 .border {
     margin: 2px;
     padding: 2px;
@@ -67,7 +82,7 @@ nav{
 .select {
     width: 100%;
     text-align: center;
-    font-size: 18px;
+    font-size: 20px;
     margin-bottom: 10px;    
     overflow: hidden;
     white-space: nowrap;
