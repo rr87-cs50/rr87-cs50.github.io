@@ -243,10 +243,6 @@ function disableButtonFive(heroAdj, openAdj, threeAdj, fourAdj){
                     document.getElementById(x).style.display = 'none';
                 }
             }
-            else if (x == openAdj || x == threeAdj){
-                document.getElementById(x).disabled = false;
-                document.getElementById(x).style.display = '';
-            }
             else if (p == 0){
                 document.getElementById(x).disabled = true;
                 document.getElementById(x).style.display = 'none';
