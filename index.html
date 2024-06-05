@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="styles.css" />
+        <script src="/app.js"></script>
+    </head>
+
+    <body>
+        <nav>
+            <div class="logo">6-max - No Ante - 100 bb</div>
+            <div class="random">
+                <div class="diceDiv">
+                <button class="dice" onclick="document.getElementById('demo').innerHTML = getRndInteger(0,100)">
+                    <img src="images/dice.png"/>
+                </button>
+                </div>
+                <div class="numberDiv">
+                    <span id="demo">0</span>
+                </div>
+                </div>
+            
+            <div class="nav-items">         
+                <span class="border" style="background:#7D1F1F;color:white">All-in</span>
+                <span class="border" style="background:#F03C3C;color:white">Raise</span>
+                <span class="border" style="background:#5AB966;color:white">Call</span>          
+                <span class="border" style="background:#3D7CB8;color:white">Fold</span>
+            </div>
+        </nav>
+        
+        <div class="container">
+            <div class="col1">
+                <div>
+                    <img class="chartImage" src="/images/Open/LJ.png" id="chart" />
+                </div>
+            </div>
+            <div class="col2">
+                <div id="heroDiv" class="select">
+                    Hero:
+                    <button style="background: yellow; font-weight: 900;"; onclick="heroSelect('LJ')" id="hLJ">LJ</button>
+                    <button onclick="heroSelect('HJ')" id="hHJ">HJ</button>
+                    <button onclick="heroSelect('CO')" id="hCO">CO</button>
+                    <button onclick="heroSelect('BTN')" id="hBTN">BTN</button>
+                    <button onclick="heroSelect('SB')" id="hSB">SB</button>
+                    <button onclick="heroSelect('BB')" id="hBB">BB</button>
+                    <br style="font-weight: normal" />
+                </div>
+                <div id="openDiv" class="select">
+                    Open:
+                    <button onclick="openSelect('oLJ')" id="oLJ">LJ</button>
+                    <button disabled="" onclick="openSelect('oHJ')" id="oHJ">HJ</button>
+                    <button disabled="" onclick="openSelect('oCO')" id="oCO">CO</button>
+                    <button disabled="" onclick="openSelect('oBTN')" id="oBTN">BTN</button>
+                    <button disabled="" onclick="openSelect('oSB')" id="oSB">SB</button>
+                </div>
+                <div class="select" id="threeDiv" style="display: none">
+                    3B:
+                    <button onclick="threeSelect('3LJ')" id="3LJ">LJ</button>
+                    <button onclick="threeSelect('3HJ')" id="3HJ">HJ</button>
+                    <button onclick="threeSelect('3CO')" id="3CO">CO</button>
+                    <button onclick="threeSelect('3BTN')" id="3BTN">BTN</button>
+                    <button onclick="threeSelect('3SB')" id="3SB">SB</button>
+                    <button onclick="threeSelect('3BB')" id="3BB">BB</button>
+                </div>
+                <div class="select" id="fourDiv" style="display: none">
+                    4B:
+                    <button onclick="fourSelect('4LJ')" id="4LJ">LJ</button>
+                    <button onclick="fourSelect('4HJ')" id="4HJ">HJ</button>
+                    <button onclick="fourSelect('4CO')" id="4CO">CO</button>
+                    <button onclick="fourSelect('4BTN')" id="4BTN">BTN</button>
+                    <button onclick="fourSelect('4SB')" id="4SB">SB</button>
+                    <button onclick="fourSelect('4BB')" id="4BB">BB</button>
+                </div>
+                <div class="select" id="fiveDiv" style="display: none">
+                    All-in:
+                    <button onclick="fiveSelect('5LJ')" id="5LJ">LJ</button>
+                    <button onclick="fiveSelect('5HJ')" id="5HJ">HJ</button>
+                    <button onclick="fiveSelect('5CO')" id="5CO">CO</button>
+                    <button onclick="fiveSelect('5BTN')" id="5BTN">BTN</button>
+                    <button onclick="fiveSelect('5SB')" id="5SB">SB</button>
+                    <button onclick="fiveSelect('5BB')" id="5BB">BB</button>
+                </div>
+            </div>
+    </div>
+    </body>
+</html>
